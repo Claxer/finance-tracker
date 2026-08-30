@@ -1,8 +1,15 @@
-# Personal Finance Tracker - Python
+# Personal Finance Tracker
 
-A beginner-friendly **Personal Finance Tracker** built with Python. The application allows users to manage their income and expenses, organize transactions by category, and monitor their overall financial status through a graphical user interface.
+A beginner-friendly **Personal Finance Tracker** project built with **Python and Web Technologies**. The application allows users to manage their income and expenses, organize transactions by category, search and filter financial records, view financial summaries, and visualize spending activity.
 
-The project uses **CustomTkinter** for the interface, **SQLite** for storing financial data, and **Matplotlib** for displaying financial charts.
+This project contains **two versions of the application**:
+
+* **Python Version** — Desktop application built with Python, CustomTkinter, SQLite, and Matplotlib.
+* **Web Version** — Browser-based application built with HTML, CSS, and Vanilla JavaScript.
+
+Both versions are designed to provide the same core purpose while demonstrating different approaches to application development.
+
+---
 
 ## Features
 
@@ -15,159 +22,36 @@ The project uses **CustomTkinter** for the interface, **SQLite** for storing fin
 * Add transaction descriptions
 * Record transaction dates
 * View complete transaction history
+* Automatically calculate transaction totals
 
 ### Search and Filtering
 
 * Search transactions
 * Filter transactions by category
 * Filter transactions by transaction type
-* Easily view specific financial records
+* Find specific financial records quickly
+* View filtered transaction results
 
 ### Financial Summary
 
-* Calculate total income
-* Calculate total expenses
-* Calculate current balance
-* Display financial summaries
-* Monitor spending and income
+The application provides an overview of the user's financial situation.
 
-### Charts and Visualization
+* Total income
+* Total expenses
+* Current balance
+* Transaction count
+* Financial activity summary
+* Income and expense comparisons
 
-* Display financial data using charts
-* Visualize income and expenses
-* View spending by category
-* Get a quick overview of financial activity
-
-### Database
-
-* Store transactions using SQLite
-* Keep financial records after closing the application
-* Automatically create the required database
-* Manage transaction records through the database
-
-### User Interface
-
-* Modern graphical user interface
-* Separate pages for different functions
-* Transactions page
-* Charts page
-* Settings page
-* User-friendly navigation
-
-## Technologies Used
-
-* **Python** - Main programming language
-* **CustomTkinter** - Graphical user interface
-* **SQLite** - Local database for storing transactions
-* **Matplotlib** - Charts and data visualization
-
-## Python Libraries
-
-The project uses the following Python libraries:
-
-```text
-customtkinter
-matplotlib
-```
-
-SQLite is included with Python through the built-in `sqlite3` module.
-
-## Project Structure
-
-```text
-finance-tracker/
-│
-├── main.py
-├── database.py
-├── transactions.py
-├── charts.py
-├── settings.py
-└── README.md
-```
-
-### File Descriptions
-
-| File              | Description                                                            |
-| ----------------- | ---------------------------------------------------------------------- |
-| `main.py`         | Starts the application and creates the main window                     |
-| `database.py`     | Creates and manages the SQLite database                                |
-| `transactions.py` | Handles adding, editing, deleting, searching, and viewing transactions |
-| `charts.py`       | Displays financial charts and summaries                                |
-| `settings.py`     | Contains application settings and preferences                          |
-| `README.md`       | Project documentation                                                  |
-
-## How to Install
-
-### 1. Install Python
-
-Make sure Python is installed on your computer.
-
-You can check your Python version using:
-
-```bash
-python --version
-```
-
-### 2. Clone the Repository
-
-```bash
-git clone https://github.com/your-username/finance-tracker.git
-```
-
-### 3. Open the Project Folder
-
-```bash
-cd finance-tracker
-```
-
-### 4. Install the Required Libraries
-
-```bash
-pip install customtkinter matplotlib
-```
-
-## How to Run
-
-Run the following command inside the project folder:
-
-```bash
-python main.py
-```
-
-The Personal Finance Tracker application should open in a graphical window.
-
-## How It Works
-
-1. Open the application.
-2. Add your income or expenses.
-3. Assign a category to each transaction.
-4. View your transactions in the transaction history.
-5. Edit or delete transactions when needed.
-6. Use the search and filter options to find specific records.
-7. Check your total income, expenses, and balance.
-8. Open the Charts page to visualize your financial activity.
-9. Use the Settings page to manage application preferences.
-
-## Financial Calculation
-
-The application calculates the current balance using:
+Balance is calculated using:
 
 ```text
 Balance = Total Income - Total Expenses
 ```
 
-For example:
+### Categories
 
-```text
-Total Income:     ₱25,000
-Total Expenses:   ₱15,000
----------------------------
-Current Balance:  ₱10,000
-```
-
-## Categories
-
-Transactions can be organized using categories such as:
+Transactions can be organized into categories such as:
 
 * Food
 * Transportation
@@ -179,37 +63,335 @@ Transactions can be organized using categories such as:
 * Allowance
 * Other
 
-Categories can be used to make it easier to understand where money is coming from and where it is being spent.
+Categories make it easier to understand where money is being earned and spent.
 
-## Database
+---
 
-The application uses **SQLite** to store transaction records locally.
+# Python Version
 
-This means the financial data does not need to be manually entered again every time the application is opened.
+The Python version is a desktop application with a graphical user interface.
 
-The database is created automatically when the application starts.
+## Python Features
 
-## Data Visualization
+* Modern desktop interface
+* CustomTkinter GUI
+* SQLite database
+* Transaction management
+* Search and filtering
+* Financial summaries
+* Financial charts
+* Separate application pages
+* Settings page
+* Persistent local data storage
 
-The Charts page uses **Matplotlib** to turn financial data into visual charts.
+## Python Technologies
+
+* **Python** — Main programming language
+* **CustomTkinter** — GUI framework
+* **SQLite** — Local database
+* **Matplotlib** — Data visualization
+
+## Python Libraries
+
+```text
+customtkinter
+matplotlib
+```
+
+SQLite is included with Python through the built-in:
+
+```python
+sqlite3
+```
+
+## Python Project Structure
+
+```text
+finance-tracker/
+│
+├── Python/
+│   ├── main.py
+│   ├── database.py
+│   ├── transactions.py
+│   ├── charts.py
+│   └── settings.py
+│
+└── README.md
+```
+
+### Python File Descriptions
+
+| File              | Description                                                            |
+| ----------------- | ---------------------------------------------------------------------- |
+| `main.py`         | Starts the Python application and creates the main window              |
+| `database.py`     | Creates and manages the SQLite database                                |
+| `transactions.py` | Handles adding, editing, deleting, searching, and viewing transactions |
+| `charts.py`       | Displays financial charts and summaries                                |
+| `settings.py`     | Handles application settings and preferences                           |
+
+---
+
+# Web Version
+
+The Web version is a browser-based implementation of the Personal Finance Tracker.
+
+It uses **HTML, CSS, and Vanilla JavaScript** without requiring a backend server.
+
+## Web Features
+
+* Add income and expenses
+* Edit transactions
+* Delete transactions
+* Search transactions
+* Filter transactions
+* Categorize transactions
+* Add transaction descriptions
+* Record transaction dates
+* Calculate total income
+* Calculate total expenses
+* Calculate current balance
+* Display transaction history
+* Financial charts and visualizations
+* Dark and light theme support
+* Responsive user interface
+* Local data storage
+* Persistent transactions using browser storage
+
+## Web Technologies
+
+* **HTML5** — Application structure
+* **CSS3** — Styling and responsive interface
+* **JavaScript** — Application logic and functionality
+* **LocalStorage** — Saving financial data in the browser
+* **Canvas** — Financial chart rendering
+
+## Web Project Structure
+
+```text
+Web/
+│
+├── index.html
+├── style.css
+└── script.js
+```
+
+### Web File Descriptions
+
+| File         | Description                                                                     |
+| ------------ | ------------------------------------------------------------------------------- |
+| `index.html` | Contains the structure and layout of the Finance Tracker                        |
+| `style.css`  | Controls the design, layout, themes, and responsive styling                     |
+| `script.js`  | Handles transactions, calculations, filtering, LocalStorage, themes, and charts |
+
+---
+
+# Python vs Web Version
+
+| Feature              | Python Version | Web Version      |
+| -------------------- | -------------- | ---------------- |
+| Add Transactions     | Yes            | Yes              |
+| Edit Transactions    | Yes            | Yes              |
+| Delete Transactions  | Yes            | Yes              |
+| Search               | Yes            | Yes              |
+| Filtering            | Yes            | Yes              |
+| Categories           | Yes            | Yes              |
+| Financial Summary    | Yes            | Yes              |
+| Charts               | Matplotlib     | Canvas           |
+| Data Storage         | SQLite         | LocalStorage     |
+| User Interface       | CustomTkinter  | HTML/CSS         |
+| Programming Language | Python         | JavaScript       |
+| Runs In              | Desktop        | Web Browser      |
+| Theme Support        | Settings       | Dark/Light Theme |
+
+The two versions demonstrate how the same application concept can be developed using different technologies.
+
+---
+
+# Financial Calculation
+
+The application calculates the current balance using:
+
+```text
+Balance = Total Income - Total Expenses
+```
+
+### Example
+
+```text
+Total Income:     ₱25,000
+Total Expenses:   ₱15,000
+---------------------------
+Current Balance:  ₱10,000
+```
+
+If expenses are greater than income, the balance will become negative.
+
+---
+
+# Database and Data Storage
+
+## Python Version
+
+The Python application uses **SQLite** to store transactions locally.
+
+The database is automatically created when the application starts.
+
+This allows financial records to remain available even after closing and reopening the application.
+
+```text
+Python Application
+       │
+       ▼
+   SQLite Database
+       │
+       ▼
+ Transaction Records
+```
+
+## Web Version
+
+The Web application uses the browser's **LocalStorage** to save transactions.
+
+This allows data to remain available after refreshing or closing the browser.
+
+```text
+Web Application
+       │
+       ▼
+   LocalStorage
+       │
+       ▼
+ Transaction Records
+```
+
+The Python and Web versions use different storage systems because they are separate implementations.
+
+---
+
+# Data Visualization
+
+Both versions provide financial data visualization.
+
+### Python
+
+The Python version uses **Matplotlib** to create financial charts.
+
+### Web
+
+The Web version uses **JavaScript and Canvas** to display financial charts directly in the browser.
 
 Charts can help users understand:
 
-* Total income
-* Total expenses
+* Income
+* Expenses
 * Spending by category
-* Overall financial activity
+* Financial activity
+* Income versus expenses
 
-## Requirements
+---
+
+# Installation
+
+## Python Version
+
+### 1. Install Python
+
+Make sure Python 3.x is installed.
+
+Check your Python version:
+
+```bash
+python --version
+```
+
+### 2. Clone the Repository
+
+```bash
+git clone https://github.com/your-username/finance-tracker.git
+```
+
+### 3. Open the Project
+
+```bash
+cd finance-tracker
+```
+
+### 4. Install Dependencies
+
+```bash
+pip install customtkinter matplotlib
+```
+
+### 5. Run the Application
+
+```bash
+python Python/main.py
+```
+
+---
+
+# Running the Web Version
+
+The Web version does not require Python or additional packages.
+
+### Option 1 — Open Directly
+
+Open:
+
+```text
+Web/index.html
+```
+
+in your web browser.
+
+### Option 2 — Use VS Code
+
+If using Visual Studio Code, you can use a local development extension such as **Live Server** to launch the website.
+
+---
+
+# How It Works
+
+1. Open either the Python or Web version.
+2. Add an income or expense transaction.
+3. Enter the amount.
+4. Select a category.
+5. Add a description if needed.
+6. Select the transaction date.
+7. Save the transaction.
+8. View the transaction in the history.
+9. Search or filter transactions when needed.
+10. Edit or delete transactions.
+11. Check the financial summary.
+12. Open the Charts section to view financial activity.
+13. Use the available settings or theme options.
+
+---
+
+# Requirements
+
+## Python Version
 
 * Python 3.x
 * CustomTkinter
 * Matplotlib
 * SQLite3
 
-## Future Improvements
+## Web Version
 
-Possible future features include:
+* Modern web browser
+* HTML5 support
+* CSS3 support
+* JavaScript support
+* LocalStorage support
+
+No external JavaScript framework is required.
+
+---
+
+# Future Improvements
+
+Possible future improvements include:
 
 * Monthly financial reports
 * Budget tracking
@@ -218,27 +400,79 @@ Possible future features include:
 * Export transactions to CSV
 * Export financial reports to PDF
 * More chart types
-* Dark and light themes
-* Password protection
-* Backup and restore database
 * Monthly spending limits
-* Notifications for budget limits
+* Budget notifications
+* Backup and restore
+* Improved mobile responsiveness
+* User accounts
+* Cloud database synchronization
+* Cross-device data synchronization
+* More advanced financial analytics
 
-## Purpose of the Project
+---
 
-This project was created as a beginner-friendly Python application to practice:
+# Purpose of the Project
+
+This project was created as a beginner-friendly way to practice both **Python desktop development** and **Web development**.
+
+The project demonstrates:
 
 * Python programming
+* JavaScript programming
+* HTML and CSS
 * Object-oriented programming concepts
 * GUI development
-* Database management
+* Web interface development
 * CRUD operations
+* Database management
+* Local data storage
 * Data visualization
+* Search and filtering
+* Financial calculations
 * File and project organization
-* Basic financial calculations
+* Responsive UI design
 
-## Author
+Building both versions also helps demonstrate how the same application idea can be implemented using different programming languages and technologies.
+
+---
+
+# Learning Goals
+
+Through this project, the main goals are to understand how to:
+
+* Build a complete application from scratch
+* Create graphical user interfaces
+* Work with databases
+* Store and retrieve data
+* Perform CRUD operations
+* Handle user input
+* Calculate financial information
+* Create charts and visualizations
+* Use JavaScript for application logic
+* Store data using browser LocalStorage
+* Organize a multi-file project
+* Create both desktop and web applications
+
+---
+
+# Project Versions
+
+### Desktop
+
+**Python + CustomTkinter + SQLite + Matplotlib**
+
+A desktop-based version designed to run locally on a computer.
+
+### Web
+
+**HTML + CSS + JavaScript + LocalStorage + Canvas**
+
+A browser-based version that can be opened without installing Python or additional dependencies.
+
+---
+
+# Author
 
 **Jose Navoa**
 
-A first-year Information Technology student building beginner-friendly programming projects while learning Python and software development.
+First-year Information Technology student building beginner-friendly programming projects while learning Python, JavaScript, web development, databases, and software development.

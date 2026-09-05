@@ -1,0 +1,105 @@
+.hero,.page-heading{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;margin-bottom:30px}
+
+.hero h1{font-family:"Space Grotesk";font-size:clamp(30px,4vw,48px);line-height:1.04;max-width:760px;margin:10px 0 9px;letter-spacing:-1.8px}
+
+.hero h1 span{color:var(--muted)}
+
+.hero p,.page-heading p{margin:0;color:var(--muted);font-size:14px}
+
+.page-heading h1{font-family:"Space Grotesk";font-size:38px;margin:8px 0 8px;letter-spacing:-1px}
+
+.month-control,.month-picker{display:flex;align-items:center;gap:8px}
+
+.month-control strong{font-size:13px;min-width:115px;text-align:center}
+
+.month-picker input{height:38px;background:var(--surface);border:1px solid var(--line);border-radius:10px;color:var(--text);padding:0 10px}
+
+.metric-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:16px}
+
+.metric-grid.three{grid-template-columns:repeat(3,1fr)}
+
+.metric-card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:20px;min-height:142px;box-shadow:var(--shadow)}
+
+.metric-card.featured{background:linear-gradient(145deg,var(--surface3),var(--surface));}
+
+.metric-top,.metric-bottom{display:flex;align-items:center;justify-content:space-between;color:var(--muted);font-size:11px}
+
+.metric-symbol{width:26px;height:26px;border-radius:8px;background:var(--surface3);display:grid;place-items:center;color:var(--text);font-weight:700}
+
+.metric-symbol.up,.trend.up{color:var(--good)}
+
+.metric-symbol.down,.trend.down{color:var(--bad)}
+
+.metric-value{font-family:"Space Grotesk";display:block;font-size:27px;margin:18px 0}
+
+.metric-bottom{font-size:10px;color:var(--muted2)}
+
+.trend{font-weight:700}
+
+.dashboard-grid{display:grid;grid-template-columns:1.35fr 1fr;gap:16px;margin-bottom:16px}
+
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:22px;box-shadow:var(--shadow)}
+
+.panel.large{min-height:390px}
+
+.panel-head{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;margin-bottom:20px}
+
+.panel h2{font-family:"Space Grotesk";font-size:17px;margin:7px 0 0}
+
+.pill{font-size:10px;color:var(--muted);background:var(--surface2);padding:7px 9px;border-radius:99px}
+
+.chart-wrap{height:285px;position:relative}
+
+.chart-wrap.tall{height:390px}
+
+.donut-wrap{height:190px;position:relative}
+
+.donut-wrap canvas{max-height:190px}
+
+.donut-center{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;flex-direction:column;pointer-events:none}
+
+.donut-center strong{font-family:"Space Grotesk";font-size:20px}
+
+.donut-center span{font-size:9px;color:var(--muted2)}
+
+.legend{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:12px}
+
+.legend-item{font-size:10px;color:var(--muted);display:flex;align-items:center;gap:7px}
+
+.legend-dot{width:7px;height:7px;border-radius:50%;background:var(--dot)}
+
+.stack-list,.rank-list,.detail-list{display:grid;gap:13px}
+
+.stack-item{display:grid;gap:7px}
+
+.stack-top{display:flex;justify-content:space-between;font-size:11px}
+
+.stack-top span:last-child{color:var(--muted)}
+
+.progress{height:6px;background:var(--surface3);border-radius:99px;overflow:hidden}
+
+.progress>i{display:block;height:100%;border-radius:99px;background:var(--text);transition:width .6s ease}
+
+.progress.warn>i{background:var(--warn)}
+
+.progress.bad>i{background:var(--bad)}
+
+.progress.good>i{background:var(--good)}
+
+.recent-panel{padding-bottom:10px}
+
+.transaction-row{display:grid;grid-template-columns:42px 1fr auto auto auto;gap:12px;align-items:center;padding:13px 4px;border-top:1px solid var(--line)}
+
+.tx-icon{width:36px;height:36px;border-radius:11px;background:var(--surface2);display:grid;place-items:center}
+
+.tx-main strong,.tx-main small{display:block}
+
+.tx-main small{font-size:10px;color:var(--muted2);margin-top:3px}
+
+.tx-date{font-size:10px;color:var(--muted2)}
+
+.tx-amount{font-weight:750;font-size:12px}
+
+.income-text{color:var(--good)}
+
+.expense-text{color:var(--bad)}

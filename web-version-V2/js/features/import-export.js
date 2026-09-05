@@ -1,0 +1,7 @@
+function setupImportExport(){
+  qs("#exportBtn").onclick=()=>{const data={version:3,exportedAt:new Date().toISOString(),transactions:state.transactions,budgets:state.budgets,savings:state.savings,categories:state.categories};download("finance-backup.json",JSON.stringify(data,null,2),"application/json");toast("Backup exported.")};
+  qs("#csvBtn").onclick=()=>{const rows=[["Date","Type","Amount","Category","Description","Payment Method","Recurring"],...state.transactions.map(t=>[t.date,t.type,t.amount,t.category,t.description,t.paymentMethod||"Cash",t.recurring?"Yes":"No"])];const csv=rows.map(r=>r.map(v=>`"${String(v??"").replace(/"/g,'""')}"`).join(",")).join("\n");download("finance-transactions.csv",csv,"text/csv");toast("CSV exported.")};
+  qs("#importInput").onchange=e=>{const file=e.target.files[0];if(!file)return;const reader=new FileReader();reader.onload=()=>{try{const d=JSON.parse(reader.result);if(!Array.isArray(d.transactions))throw new Error();state.transactions=d.transactions.map(normalizeTransaction);state.budgets=d.budgets&&typeof d.budgets==="object"?d.budgets:{};state.savings=Array.isArray(d.savings)?d.savings:[];if(Array.isArray(d.categories))state.categories=d.categories;persist();renderAll();toast("Backup imported.")}catch{toast("That backup file is not valid.")}};reader.readAsText(file)}
+}
+
+function download(name,data,type){const blob=new Blob([data],{type}),a=document.createElement("a");a.href=URL.createObjectURL(blob);a.download=name;a.click();URL.revokeObjectURL(a.href)}

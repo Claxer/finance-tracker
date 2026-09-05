@@ -1,0 +1,8 @@
+:root{
+  --bg:#0b0c0f;--surface:#121419;--surface2:#17191f;--surface3:#1d2027;--line:rgba(255,255,255,.09);
+  --text:#f5f6f7;--muted:#969ba5;--muted2:#6f747e;--accent:#f4f5f7;--accentText:#0b0c0f;
+  --good:#75d6a4;--bad:#ff8585;--warn:#f4c86b;--blue:#8fb7ff;--shadow:0 20px 60px rgba(0,0,0,.22);
+  --radius:20px;--radius2:14px
+}
+
+body.light{--bg:#f5f6f8;--surface:#fff;--surface2:#f0f1f4;--surface3:#e7e9ed;--line:rgba(15,17,20,.09);--text:#111318;--muted:#656b75;--muted2:#8b9099;--accent:#111318;--accentText:#fff;--shadow:0 18px 45px rgba(25,30,40,.08)}
